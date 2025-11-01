@@ -13,7 +13,7 @@ export class PerfilPages {
   age = signal(30);
 
   getFullName() {
-    return '${this.name()} ${this.lastName()} con edad ${this.age()} años';
+    return `${this.name()} ${this.lastName()} con edad ${this.age()} años`;
   }
 
 
