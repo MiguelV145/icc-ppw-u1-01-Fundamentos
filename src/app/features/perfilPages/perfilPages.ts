@@ -15,14 +15,11 @@ export class PerfilPages {
   getFullName() {
     return `${this.name()} ${this.lastName()} con edad ${this.age()} años`;
   }
-
-
   changeData() {
     this.name.set('Ana');
     this.lastName.set('Gonzales');
     this.age.set(25);
   }
-
 
   changeAge() {
     this.age.set(18);
@@ -32,6 +29,6 @@ export class PerfilPages {
     this.name.set('Juan');
     this.lastName.set('Pérez');
     this.age.set(30);
-  }
+  }
 
  }
