@@ -12,8 +12,6 @@ export const routes: Routes = [
             component: HomePages
 
         },
-
-
         {
             path: 'perfile',
             component: PefilPage
