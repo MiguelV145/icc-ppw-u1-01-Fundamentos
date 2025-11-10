@@ -1,1 +1,10 @@
-<p>ProyectosPages2 works!</p>,
+<listado-componnete listName="Listado Proyecto desde Service"  [proyectos]="proyectosService.proyectos()"></listado-componnete>
+
+<p>Aqui deberia estar un componente que el agrege el Service</p>
+
+<app-add-proyecto 
+    (newPRoyecto)="proyectosService.addProyecto($event)"
+
+>  
+
+</app-add-proyecto>

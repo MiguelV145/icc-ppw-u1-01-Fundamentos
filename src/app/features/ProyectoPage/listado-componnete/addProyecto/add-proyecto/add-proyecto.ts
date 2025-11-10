@@ -1,16 +1,15 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-import { ListadoComponnete } from './listado-componnete/listado-componnete';
+import { ChangeDetectionStrategy, Component, output, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-proyecto-page',
-  imports: [ListadoComponnete],
-  templateUrl: './ProyectoPage.html',
+  selector: 'app-add-proyecto',
+  imports: [],
+  templateUrl: './add-proyecto.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProyectoPage {
-
-  
-
+export class AddProyecto {
+listName() {
+throw new Error('Method not implemented.');
+}
 
   name=signal ('')
   descripcion= signal('')
@@ -20,7 +19,9 @@ export class ProyectoPage {
     description: 'descipcion'
   }]);
 
-  changeName (value: string ){
+  newPRoyecto =output <Proyecto>();
+  
+   changeName (value: string ){
     this.name.set(value)
   }
 
@@ -28,20 +29,17 @@ export class ProyectoPage {
     this.descripcion.set(value);
 
   }
-
   addProyecto(){
     const newProyecto: Proyecto ={
-      id: this.proyectos().length +1,
+      id: Math.floor(Math.random() *1000),
       nombre: this.name(),
       description: this.descripcion()
 
     };
-
-    this.proyectos.set([...this.proyectos(), newProyecto]);
+    this.newPRoyecto.emit(newProyecto);
     this.name.set('');
     this.descripcion.set('');
+    
   }
 
-
-
-}
+ }
