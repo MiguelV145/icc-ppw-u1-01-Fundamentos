@@ -20,6 +20,13 @@ throw new Error('Method not implemented.');
   }]);
 
   newPRoyecto =output <Proyecto>();
+  removeProyecto=output <number>();
+
+
+  deletProyecto(id: number){
+    this.removeProyecto.emit(id);
+
+  }
   
    changeName (value: string ){
     this.name.set(value)
@@ -40,6 +47,9 @@ throw new Error('Method not implemented.');
     this.name.set('');
     this.descripcion.set('');
     
-  }
+  }  
 
+  deleteProyecto(){
+
+  }
  }

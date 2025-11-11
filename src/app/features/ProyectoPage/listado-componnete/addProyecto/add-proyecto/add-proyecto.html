@@ -7,5 +7,7 @@
     <input type="text" placeholder=" Descripcion del proyecto " [value]="descripcion()"   (change)="changeDescripcion(txtDescripcion.value)"  #txtDescripcion />
 
     <button  (click)=" addProyecto()">Agregar</button>
+
+    <button (click)="deletProyecto(1)">eliminar</button>
   
 </div>
